@@ -1,0 +1,45 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+apply plugin: 'com.eholee.plugin.view-binding'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/en/docs/documentation/doc-guides/ide_debug_device-0000001053822404#EN-US_TOPIC_0000001154985555__section1112183053510
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+viewBinding{
+    enable true
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    implementation 'org.jetbrains:annotations:19.0.0'
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1'
+    implementation 'io.openharmony.tpc.thirdlib:DialogV3:1.0.0'
+
+    implementation 'com.huawei.hms:push-ohos:5.2.0.305'
+    implementation 'com.huawei.hms:location:6.9.0.300'
+    implementation 'com.huawei.hms:maps:6.6.0.300'
+    implementation 'com.huawei.hms:health:6.8.0.300'
+    implementation 'com.huawei.hms:hwid:6.9.0.301'
+}
+decc {
+    supportType = ['html','xml']
+}

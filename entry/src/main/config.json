@@ -1,0 +1,110 @@
+{
+  "app": {
+    "bundleName": "com.example.crowdhubharmony",
+    "vendor": "example",
+    "version": {
+      "code": 1000001,
+      "name": "1.0.1"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.example.crowdhubharmony",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.crowdhubharmony.MainAbility",
+    "deviceType": [
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "services": [
+      {
+        "backgroundModes": [],
+        "skills": [
+          {
+            "actions": [
+              "com.huawei.push.action.MESSAGING_EVENT"
+            ]
+          }
+        ],
+        "name": ".services.MessagingService",
+        "icon": "$media:icon",
+        "description": "MessagingService",
+        "type": "service",
+        "visible": false,
+        "directLaunch": false,
+        "permissions": []
+      }
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.SplashActivity",
+        "icon": "$media:icon",
+        "description": "$string:splashactivity_description",
+        "label": "$string:entry_SplashActivity",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.TestAbility",
+        "icon": "$media:icon",
+        "description": "$string:testability_description",
+        "label": "$string:entry_TestAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.DeviceIdAbility",
+        "icon": "$media:icon",
+        "description": "$string:deviceidability_description",
+        "label": "$string:entry_DeviceIdAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.PingNotificationScreen",
+        "icon": "$media:icon",
+        "description": "$string:pingnotificationscreen_description",
+        "label": "$string:entry_PingNotificationScreen",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.SplashAbility",
+        "icon": "$media:icon",
+        "description": "$string:splashability_description",
+        "label": "$string:entry_SplashAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:padding="0vp">
+
+    <RelativeLayout
+        ohos:height="match_content"
+        ohos:width="match_parent">
+        <VerticalLayout
+            ohos:height="wrap_content"
+            ohos:width="match_parent"
+            ohos:alignment="center">
+            <Text
+                ohos:height="wrap_content"
+                ohos:width="wrap_content"
+                ohos:text="Enter this Serial number in dashboard:"/>
+
+            <Text
+                ohos:height="wrap_content"
+                ohos:width="match_parent"
+                ohos:marginTop="8vp"
+                ohos:textStyle="bold_italic"
+                ohos:textColor="#FFC0CB"
+                ohos:gravity="center"
+                ohos:id="$+id:deviceIdTv"
+                ohos:text="Arsalan"/>
+        </VerticalLayout>
+    </RelativeLayout>
+
+</DirectionalLayout>

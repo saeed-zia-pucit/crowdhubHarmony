@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <ConstraintLayout
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:margin="32vp"
+        ohos:padding="32vp"
+        ohos:horizontal_align="center"
+        ohos:vertical_align="center">
+
+        <TextView
+            ohos:id="$+id:msgTxt"
+            ohos:height="wrap_content"
+            ohos:width="wrap_content"
+            ohos:text="@string/ping_msg"
+            ohos:text_alignment="center"
+            ohos:margin_top="16vp"
+            ohos:layout_alignment="center"/>
+
+        <Button
+            ohos:id="$+id:btnPing"
+            ohos:height="wrap_content"
+            ohos:width="wrap_content"
+            ohos:text="@string/ping_ok"
+            ohos:margin_top="16vp"
+            ohos:padding_left="32vp"
+            ohos:padding_right="32vp"
+            ohos:layout_below="$+id:msgTxt"
+            ohos:layout_alignment="center"/>
+
+    </ConstraintLayout>
+
+</DirectionalLayout>

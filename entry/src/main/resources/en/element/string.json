@@ -1,0 +1,88 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_SplashActivity",
+      "value": "entry_SplashActivity"
+    },
+    {
+      "name": "splashactivity_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "splashactivity_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_TestAbility",
+      "value": "entry_TestAbility"
+    },
+    {
+      "name": "testability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "testability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_DeviceIdAbility",
+      "value": "entry_DeviceIdAbility"
+    },
+    {
+      "name": "deviceidability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "deviceidability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_PingNotificationScreen",
+      "value": "entry_PingNotificationScreen"
+    },
+    {
+      "name": "pingnotificationscreen_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "pingnotificationscreen_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_SplashAbility",
+      "value": "entry_SplashAbility"
+    },
+    {
+      "name": "splashability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "splashability_HelloWorld",
+      "value": "Hello World"
+    }
+  ]
+}
