@@ -4,13 +4,22 @@ apply plugin: 'com.huawei.ohos.app'
 ohos {
     signingConfigs {
         release {
-            storeFile file('/Users/apple/Desktop/keys/key.p12')
-            storePassword '00000018AC5FF5572978F418724053809C314E5461B2E39C006A65BB39179228C3C5CF6E171A3997'
+            storeFile file('/Users/apple/Desktop/release/release.p12')
+            storePassword '00000018F3E97B8E4622C8A1A9D126EFB9B382AE769E1AB2E615EEE297EF4C94EF3754232BA438D4'
             keyAlias = 'key0'
-            keyPassword '00000018211C6C0982CDB1149852FAC1DA342D0DC90755FB0555F453AEAF5FA192764D2E4EA32FB3'
+            keyPassword '00000018B292081A79BD545ECA747D2248DBE5D24027F4BB1970AEFF96C5C77E370EA6B1E4573B30'
             signAlg = 'SHA256withECDSA'
-            profile file('/Users/apple/Downloads/crowdhubharmonyRelease.p7b')
-            certpath file('/Users/apple/Downloads/crowdReleasescert.cer')
+            profile file('/Users/apple/Downloads/crowdReleaseRelease.p7b')
+            certpath file('/Users/apple/Downloads/release cert.cer')
+        }
+        debug {
+            storeFile file('/Users/apple/Desktop/release/release.p12')
+            storePassword '000000188277CD777C7548ED16E4754240127B4FA1C510551CD9C197656A5C85E28BF2269AB8C196'
+            keyAlias = 'key0'
+            keyPassword '00000018719D17204347D656D89F40B1B9D7E4761D179810E258EDEE7616665CE42D962C891A690E'
+            signAlg = 'SHA256withECDSA'
+            profile file('/Users/apple/Downloads/debugDebug.p7b')
+            certpath file('/Users/apple/Downloads/debug.cer')
         }
     }
     compileSdkVersion 5
@@ -29,16 +38,14 @@ buildscript {
             url 'https://developer.huawei.com/repo/'
         }
         jcenter()
-        maven{
+        maven {
             url 'https://dl.bintray.com/eholee/maven'
         }
     }
     dependencies {
         classpath 'com.huawei.ohos:hap:2.4.4.2'
         classpath 'com.huawei.ohos:decctest:1.2.4.0'
-        classpath 'com.eholee.plugin:view-binding:1.0.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32"
-
+        classpath 'com.huawei.agconnect:agcp-harmony:1.3.0.300'
     }
 
 }

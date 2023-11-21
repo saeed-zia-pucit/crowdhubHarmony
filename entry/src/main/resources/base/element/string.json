@@ -61,18 +61,6 @@
       "value": "entry_PingNotificationScreen"
     },
     {
-      "name": "mainability_description",
-      "value": "Java_Empty Ability"
-    },
-    {
-      "name": "mainability_HelloWorld",
-      "value": "Hello World"
-    },
-    {
-      "name": "entry_MainAbility",
-      "value": "entry_MainAbility"
-    },
-    {
       "name": "splashability_description",
       "value": "Java_Empty Ability"
     },
@@ -83,6 +71,66 @@
     {
       "name": "entry_SplashAbility",
       "value": "entry_SplashAbility"
+    },
+    {
+      "name": "sign_up",
+      "value": "Sign Up"
+    },
+    {
+      "name": "login",
+      "value": "Login"
+    },
+    {
+      "name": "locationability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "locationability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_LocationAbility",
+      "value": "entry_LocationAbility"
+    },
+    {
+      "name": "fusedlocationability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "fusedlocationability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_FusedLocationAbility",
+      "value": "entry_FusedLocationAbility"
+    },
+    {
+      "name": "locationservice_description",
+      "value": "hap sample empty service"
+    },
+    {
+      "name": "mapability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mapability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_MapAbility",
+      "value": "entry_MapAbility"
+    },
+    {
+      "name": "mapdirectionability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mapdirectionability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_MapDirectionAbility",
+      "value": "entry_MapDirectionAbility"
     }
   ]
 }

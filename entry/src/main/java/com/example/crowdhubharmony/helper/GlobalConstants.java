@@ -5,6 +5,7 @@ import com.kongzue.dialog.v3.MessageDialog;
 import ohos.app.Context;
 import org.jetbrains.annotations.NotNull;
 
+import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -23,6 +24,7 @@ public final class GlobalConstants {
     }
 
 
+    public static String deviceId = "234adfg-343fd-df";
     @NotNull
     public final String getBASE_URL_DIRECTIONS() {
         return GlobalConstants.BASE_URL_DIRECTIONS;
@@ -102,6 +104,30 @@ public final class GlobalConstants {
         return 0;
     }
 
+    public static void generateSha256() {
+        String algorithm = "SHA-256"; // The hashing algorithm to be used
+        String data = "Hello, world!"; // The string to be hashed
+        try {
+            // Create a MessageDigest instance for the specified algorithm
+            MessageDigest md = MessageDigest.getInstance(algorithm);
+            md.update(data.getBytes());
+
+            // Generate the hash digest
+            byte[] digest = md.digest();
+
+            // Convert the hash digest to a hexadecimal string
+            StringBuilder sb = new StringBuilder();
+            for (byte b : digest) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            String hash = sb.toString();
+
+            System.out.println(hash); // Output the hash digest in hexadecimal format
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 
 }
 

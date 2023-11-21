@@ -9,30 +9,30 @@
     <ConstraintLayout
         ohos:height="match_content"
         ohos:width="match_content"
+        ohos:horizontal_align="center"
         ohos:margin="32vp"
         ohos:padding="32vp"
-        ohos:horizontal_align="center"
         ohos:vertical_align="center">
 
         <TextView
             ohos:id="$+id:msgTxt"
             ohos:height="wrap_content"
             ohos:width="wrap_content"
-            ohos:text="@string/ping_msg"
-            ohos:text_alignment="center"
+            ohos:layout_alignment="center"
             ohos:margin_top="16vp"
-            ohos:layout_alignment="center"/>
+            ohos:text="@string/ping_msg"
+            ohos:text_alignment="center"/>
 
         <Button
             ohos:id="$+id:btnPing"
             ohos:height="wrap_content"
             ohos:width="wrap_content"
-            ohos:text="@string/ping_ok"
+            ohos:layout_alignment="center"
+            ohos:layout_below="$+id:msgTxt"
             ohos:margin_top="16vp"
             ohos:padding_left="32vp"
             ohos:padding_right="32vp"
-            ohos:layout_below="$+id:msgTxt"
-            ohos:layout_alignment="center"/>
+            ohos:text="@string/ping_ok"/>
 
     </ConstraintLayout>
 

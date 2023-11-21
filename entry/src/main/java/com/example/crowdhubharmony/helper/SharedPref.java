@@ -93,7 +93,12 @@ public class SharedPref {
     }
 
     public final String getFcmToken() {
-        return preferences.getString("get_FCM_TOKEN", "");
+        return preferences.getString("get_FCM_TOKEN", "testtoken");
+    }
+
+    public final void setFcmToken(String token) {
+        preferences.putString("get_FCM_TOKEN", token);
+        preferences.flushSync();
     }
 
 }

@@ -13,7 +13,7 @@ public class SplashAbility extends Ability {
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
-        super.setUIContent(ResourceTable.Layout_ability_splash_activity);
+        super.setUIContent(ResourceTable.Layout_ability_splash);
         setTimer();
     }
 

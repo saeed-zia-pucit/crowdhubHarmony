@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<shape
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:shape="rectangle">
+
+    <solid
+        ohos:color="#FF7F7F"/>
+    <corners ohos:radius="30vp"/>
+</shape>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ohos.res.Resource-->
+<!--    xmlns:ohos="http://schemas.huawei.com/res/harmonyos"-->
+<!--    ohos:package="com.example.myapp">-->
+<!--    <ohos.graphics.drawable.StateListDrawable>-->
+<!--        <ohos.graphics.drawable.ShapeDrawable>-->
+<!--            <ohos.graphics.drawable.Shape>-->
+<!--                <ohos.graphics.drawable.GradientDrawable>-->
+<!--                    <ohos.graphics.drawable.Gradient>-->
+<!--                        <ohos.graphics.drawable.Gradient.Colors>-->
+<!--                            <ohos.color.Color value="{{color.pink}}"/>-->
+<!--                        </ohos.graphics.drawable.Gradient.Colors>-->
+<!--                        <ohos.graphics.drawable.Gradient.CornerRadius>-->
+<!--                            <ohos.utils.Dimension value="30dp"/>-->
+<!--                        </ohos.graphics.drawable.Gradient.CornerRadius>-->
+<!--                    </ohos.graphics.drawable.GradientDrawable.Gradient>-->
+<!--                </ohos.graphics.drawable.GradientDrawable>-->
+<!--            </ohos.graphics.drawable.Shape>-->
+<!--        </ohos.graphics.drawable.ShapeDrawable>-->
+<!--    </ohos.graphics.drawable.StateListDrawable>-->
+<!--</ohos.res.Resource>-->

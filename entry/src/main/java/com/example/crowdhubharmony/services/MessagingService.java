@@ -1,7 +1,10 @@
 package com.example.crowdhubharmony.services;
 
 
-import com.kongzue.dialog.util.Log;
+import com.example.crowdhubharmony.helper.SharedPref;
+import com.huawei.hms.push.ohos.HmsMessageService;
+import com.huawei.hms.push.ohos.ZRemoteMessage;
+import ohos.aafwk.content.Intent;
 import ohos.agp.utils.Color;
 import ohos.event.notification.NotificationHelper;
 import ohos.event.notification.NotificationRequest;
@@ -11,23 +14,32 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.RemoteException;
 
 public class MessagingService extends HmsMessageService {
-    private static final HiLogLabel HILOG_LABEL = new HiLogLabel(0, 0, "HmsMessageService");
+    private static final HiLogLabel HILOG_LABEL = new HiLogLabel(0, 0, "HmsMessageServiceToken");
 
     @Override
-    public void onMessageReceived(RemoteMessage message) {
-        super.onMessageReceived(message);
-        HiLog.info(HILOG_LABEL, "onMessageReceived: " + message.getNotification());
+    public void onMessageReceived(ZRemoteMessage message) {
+        HiLog.info(HILOG_LABEL, "get token, %{public}s", message.getToken());
+        HiLog.info(HILOG_LABEL, "get data, %{public}s", message.getData());
 
-        if (message.getNotification() != null) {
+        ZRemoteMessage.Notification notification = message.getNotification();
+        if (notification != null) {
+            HiLog.info(HILOG_LABEL, "get title, %{public}s", notification.getTitle());
+            HiLog.info(HILOG_LABEL, "get body, %{public}s", notification.getBody());
+
             sendNotification(message);
         } else {
-            HiLog.info(HILOG_LABEL, "onMessageReceived: Data");
-            showNotification();
-            HiLog.info(HILOG_LABEL, "onMessageReceived: END");
+            HiLog.info(HILOG_LABEL, "onMessageReceived: No Notification");
         }
     }
 
-    private void sendNotification(RemoteMessage message) {
+    @Override
+    public void onNewToken(String s) {
+        super.onNewToken(s);
+        HiLog.debug(HILOG_LABEL, s);
+        SharedPref.getInstance(getContext()).setFcmToken(s);
+    }
+
+    private void sendNotification(ZRemoteMessage message) {
         NotificationSlot slot = new NotificationSlot("slot_001", "slot_default", NotificationSlot.LEVEL_MIN); // Create a NotificationSlot object.
         slot.setDescription("NotificationSlotDescription");
         slot.setEnableVibration(true); // Enable vibration when a notification is received.
@@ -57,12 +69,34 @@ public class MessagingService extends HmsMessageService {
         } catch (RemoteException ex) {
             HiLog.error(HILOG_LABEL, "Exception occurred during publishNotification invocation.");
         }
-
     }
 
-    private void showNotification() {
-
+    @Override
+    public void onStart(Intent intent) {
+        HiLog.error(HILOG_LABEL, "PushServiceAbility::onStart");
+        super.onStart(intent);
     }
+
+    @Override
+    public void onBackground() {
+        super.onBackground();
+        HiLog.info(HILOG_LABEL, "PushServiceAbility::onBackground");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        HiLog.info(HILOG_LABEL, "PushServiceAbility::onStop");
+    }
+
+    @Override
+    public void onCommand(Intent intent, boolean restart, int startId) {
+    }
+
+    public void onTokenError(Exception exception) {
+        HiLog.debug(HILOG_LABEL, "onTokenError" + exception.toString());
+    }
+
 }
 
 

@@ -12,6 +12,7 @@
     "package": "com.example.crowdhubharmony",
     "name": ".MyApplication",
     "mainAbility": "com.example.crowdhubharmony.MainAbility",
+    "allowClassMap": true,
     "deviceType": [
       "wearable"
     ],
@@ -21,25 +22,6 @@
       "moduleType": "entry",
       "installationFree": false
     },
-    "services": [
-      {
-        "backgroundModes": [],
-        "skills": [
-          {
-            "actions": [
-              "com.huawei.push.action.MESSAGING_EVENT"
-            ]
-          }
-        ],
-        "name": ".services.MessagingService",
-        "icon": "$media:icon",
-        "description": "MessagingService",
-        "type": "service",
-        "visible": false,
-        "directLaunch": false,
-        "permissions": []
-      }
-    ],
     "abilities": [
       {
         "skills": [
@@ -59,6 +41,22 @@
         "label": "$string:entry_MainAbility",
         "type": "page",
         "launchType": "standard"
+      },
+      {
+        "backgroundModes": [],
+        "skills": [
+          {
+            "actions": [
+              "com.huawei.push.action.MESSAGING_EVENT"
+            ]
+          }
+        ],
+        "name": "com.example.crowdhubharmony.services.MessagingService",
+        "icon": "$media:icon",
+        "description": "MessagingService",
+        "type": "service",
+        "visible": false,
+        "permissions": []
       },
       {
         "orientation": "unspecified",
@@ -104,6 +102,83 @@
         "label": "$string:entry_SplashAbility",
         "type": "page",
         "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.LocationAbility",
+        "icon": "$media:icon",
+        "description": "$string:locationability_description",
+        "label": "$string:entry_LocationAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.FusedLocationAbility",
+        "icon": "$media:icon",
+        "description": "$string:fusedlocationability_description",
+        "label": "$string:entry_FusedLocationAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "backgroundModes": [
+          "dataTransfer",
+          "location"
+        ],
+        "name": "com.example.crowdhubharmony.LocationService",
+        "icon": "$media:icon",
+        "description": "$string:locationservice_description",
+        "type": "service"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.MapAbility",
+        "icon": "$media:icon",
+        "description": "$string:mapability_description",
+        "label": "$string:entry_MapAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.example.crowdhubharmony.MapDirectionAbility",
+        "icon": "$media:icon",
+        "description": "$string:mapdirectionability_description",
+        "label": "$string:entry_MapDirectionAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.LOCATION",
+        "reason": "string:reason_description",
+        "usedScene": {
+          "ability": [
+            "com.example.crowdhubharmony.LocationAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.LOCATION_IN_BACKGROUND",
+        "reason": "string:reason_description_backgroun",
+        "usedScene": {
+          "ability": [
+            "com.example.crowdhubharmony.LocationAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.INTERNET"
       }
     ]
   }

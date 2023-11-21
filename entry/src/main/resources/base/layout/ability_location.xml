@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:userAddress"
+        ohos:height="20vp"
+        ohos:width="match_parent"
+        ohos:text=""
+        ohos:text_alignment="horizontal_center"
+        ohos:text_color="#000000"
+        ohos:text_size="10fp"/>
+
+    <Button
+        ohos:id="$+id:getContinuousUserLocation"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:background_button"
+        ohos:margin="10vp"
+        ohos:text="continuous location"
+        ohos:text_color="#ffffff"
+        ohos:text_size="15fp"/>
+
+    <Button
+        ohos:id="$+id:stopAccessLoation"
+        ohos:height="40vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:background_button"
+        ohos:margin="10vp"
+        ohos:text="stop location"
+        ohos:text_color="#ffffff"
+        ohos:text_size="15fp"/>
+
+</DirectionalLayout>
